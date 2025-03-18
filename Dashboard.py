@@ -11,21 +11,21 @@ def generate_data():
     return data
 
 def tampilan_dashboard():
-    st.title("📊 Analisis Proportion Fill Survey")
+    st.title(" Analisis Proportion Fill Survey")
     
     # Generate Data
     data = generate_data()
 
     # Menampilkan Data
-    st.write("### 📌 Data Survey")
+    st.write("###  Data Survey")
     st.dataframe(data)
 
     # Menampilkan Visualisasi
-    st.markdown("### 📊 Distribusi Responden")
+    st.markdown("###  Distribusi Responden")
     st.bar_chart(data.groupby("Responded")["proportion"].mean())
 
     # Menambahkan Filter
-    st.markdown("### 🎯 Filter Data")
+    st.markdown("###  Filter Data")
     min_val, max_val = st.slider("Pilih rentang proportion:", 
                                  float(data["proportion"].min()), 
                                  float(data["proportion"].max()), 
@@ -33,7 +33,7 @@ def tampilan_dashboard():
 
     filtered_data = data[(data["proportion"] >= min_val) & (data["proportion"] <= max_val)]
 
-    st.write(f"📌 **Jumlah Data setelah Filter: {filtered_data.shape[0]}**")
+    st.write(f" **Jumlah Data setelah Filter: {filtered_data.shape[0]}**")
     st.dataframe(filtered_data)
 
 # Menjalankan fungsi utama jika file dijalankan langsung

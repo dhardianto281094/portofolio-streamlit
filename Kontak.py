@@ -1,7 +1,7 @@
 import streamlit as st
 
 def munculkan_Kontak():
-    st.title("📞 Kontak Saya")
+    st.title(" Kontak Saya")
     st.write("Hubungi saya melalui tautan berikut:")
 
     # Menampilkan tombol kontak dengan ikon dan link

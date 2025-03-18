@@ -57,7 +57,7 @@ def Tampilkan_Customer_Satisfaction():
         "count": [700, 566, 23]
     })
 
-    # 📌 Bar Chart untuk Sentimen
+    #  Bar Chart untuk Sentimen
     fig_bar = px.bar(
         sentiment_data, 
         x="vader_sentiment", 
@@ -70,7 +70,7 @@ def Tampilkan_Customer_Satisfaction():
     # Menampilkan Bar Chart di Streamlit
     st.plotly_chart(fig_bar, use_container_width=True)
 
-    # 🎯 Simulasi Data Distribusi Histogram
+    #  Simulasi Data Distribusi Histogram
     x1 = np.random.randn(200) - 2  # Distribusi mirip Negatif
     x2 = np.random.randn(200)      # Distribusi mirip Netral
     x3 = np.random.randn(200) + 2  # Distribusi mirip Positif
@@ -86,7 +86,7 @@ def Tampilkan_Customer_Satisfaction():
     # Menampilkan Distplot di Streamlit
     st.plotly_chart(fig_hist, use_container_width=True)
 
-    # 📋 Menampilkan Data dalam Tabel
+    #  Menampilkan Data dalam Tabel
     st.subheader(" Customer Sentiment Data")
     st.dataframe(sentiment_data.style.format({"count": "{:,}"}))  # Format angka dengan koma
 
@@ -102,7 +102,7 @@ def Tampilkan_Customer_Satisfaction():
     # Konfigurasi halaman
     st.title(" Customer Satisfaction & Word Cloud Analysis")
 
-    # 📌 Data Sentimen & Kata Kunci
+    #  Data Sentimen & Kata Kunci
     df_top_word = pd.DataFrame({
         "vader_sentiment": ["Positive", "Positive", "Negative", "Negative", "Neutral", "Neutral"],
         "token": ["good service", "great experience", "bad support", "slow response", "okay", "acceptable"]
@@ -145,5 +145,5 @@ def Tampilkan_Customer_Satisfaction():
     - **Berikan loyalty program** kepada pelanggan yang puas untuk mempertahankan engagement mereka.  
     """)
 
-    st.success("✅ **Gunakan insight ini untuk meningkatkan strategi bisnis Anda!**")
+    st.success(" **Gunakan insight ini untuk meningkatkan strategi bisnis Anda!**")
 

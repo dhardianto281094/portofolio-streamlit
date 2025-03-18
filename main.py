@@ -37,7 +37,7 @@ load_css()
 
 # Header utama
 st.markdown('<p class="title">Portfolio Saya</p>', unsafe_allow_html=True)
-st.markdown('<p class="subtitle">💡 Data Analyst | Data Scientist 💡</p>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle"> Data Analyst | Data Scientist </p>', unsafe_allow_html=True)
 
 # Sidebar Navigasi
 st.sidebar.title(' Navigasi')
