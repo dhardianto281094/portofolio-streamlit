@@ -11,10 +11,10 @@ def Tampilkan_Customer_Satisfacation():
         "proportion": [0.652444, 0.347556]
     })
 
-    # 🏆 Judul utama
+    #  Judul utama
     st.title(" Customer Satisfaction Analysis")
 
-    # 📌 Deskripsi singkat
+    #  Deskripsi singkat
     st.markdown("""
     ###  **Analisis Kepuasan Pelanggan**
     Grafik di bawah ini menunjukkan **proporsi pelanggan yang puas dan tidak puas** berdasarkan survei.  
