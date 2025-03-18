@@ -12,16 +12,16 @@ def Tampilkan_Customer_Satisfacation():
     })
 
     # 🏆 Judul utama
-    st.title("📊 Customer Satisfaction Analysis")
+    st.title(" Customer Satisfaction Analysis")
 
     # 📌 Deskripsi singkat
     st.markdown("""
-    ### 🏅 **Analisis Kepuasan Pelanggan**
+    ###  **Analisis Kepuasan Pelanggan**
     Grafik di bawah ini menunjukkan **proporsi pelanggan yang puas dan tidak puas** berdasarkan survei.  
     Data ini dapat digunakan untuk memahami pengalaman pelanggan dan meningkatkan layanan.
     """)
 
-    # 🎨 Membuat visualisasi Pie Chart dengan Plotly
+    #  Membuat visualisasi Pie Chart dengan Plotly
     fig = px.pie(
         data, 
         names="is_satisfied", 
@@ -35,8 +35,8 @@ def Tampilkan_Customer_Satisfacation():
     # Menampilkan Pie Chart di Streamlit
     st.plotly_chart(fig, use_container_width=True)
 
-    # 📋 Menampilkan Tabel Data dengan Format Persen
-    st.subheader("📋 Customer Satisfaction Data")
+    #  Menampilkan Tabel Data dengan Format Persen
+    st.subheader(" Customer Satisfaction Data")
     st.dataframe(data.style.format({"proportion": "{:.2%}"}))
 
 import streamlit as st
@@ -49,7 +49,7 @@ def Tampilkan_Customer_Satisfaction():
     """Fungsi untuk menampilkan analisis kepuasan pelanggan dengan distribusi sentimen."""
 
     # Konfigurasi halaman
-    st.title("📊 Customer Satisfaction & Sentiment Analysis")
+    st.title(" Customer Satisfaction & Sentiment Analysis")
 
     # Simulasi Data Sentimen
     sentiment_data = pd.DataFrame({
@@ -87,7 +87,7 @@ def Tampilkan_Customer_Satisfaction():
     st.plotly_chart(fig_hist, use_container_width=True)
 
     # 📋 Menampilkan Data dalam Tabel
-    st.subheader("📋 Customer Sentiment Data")
+    st.subheader(" Customer Sentiment Data")
     st.dataframe(sentiment_data.style.format({"count": "{:,}"}))  # Format angka dengan koma
 
 import streamlit as st
@@ -100,7 +100,7 @@ def Tampilkan_Customer_Satisfaction():
     """Fungsi untuk menampilkan analisis kepuasan pelanggan dengan Word Cloud dan rekomendasi bisnis."""
 
     # Konfigurasi halaman
-    st.title("📊 Customer Satisfaction & Word Cloud Analysis")
+    st.title(" Customer Satisfaction & Word Cloud Analysis")
 
     # 📌 Data Sentimen & Kata Kunci
     df_top_word = pd.DataFrame({
@@ -131,15 +131,15 @@ def Tampilkan_Customer_Satisfaction():
     plt.tight_layout()
     st.pyplot(fig)  # Menampilkan di Streamlit
 
-    # 📈 **Kesimpulan & Rekomendasi Bisnis**
-    st.subheader("📊 Business Insights & Recommendations")
+    #  **Kesimpulan & Rekomendasi Bisnis**
+    st.subheader(" Business Insights & Recommendations")
     
     st.markdown("""
     - **Positive Sentiment:** Pelanggan puas dengan layanan yang baik dan pengalaman yang menyenangkan.  
     - **Negative Sentiment:** Keluhan utama terkait layanan support yang buruk dan respon lambat.  
     - **Neutral Sentiment:** Beberapa pelanggan memiliki pengalaman yang biasa saja, tidak terlalu positif atau negatif.  
 
-    **📌 Rekomendasi Bisnis:**  
+    ** Rekomendasi Bisnis:**  
     - **Tingkatkan layanan customer support** untuk mengatasi keluhan utama.  
     - **Gunakan teknologi AI chatbot** untuk mempercepat respon terhadap pelanggan.  
     - **Berikan loyalty program** kepada pelanggan yang puas untuk mempertahankan engagement mereka.  

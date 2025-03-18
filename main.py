@@ -40,27 +40,27 @@ st.markdown('<p class="title">Portfolio Saya</p>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">💡 Data Analyst | Data Scientist 💡</p>', unsafe_allow_html=True)
 
 # Sidebar Navigasi
-st.sidebar.title('📌 Navigasi')
+st.sidebar.title(' Navigasi')
 st.sidebar.markdown("---")
-page = st.sidebar.radio('Pilih Halaman:', ['🏠 Tentang Saya', '📊 Dashboard', '📉 Customer_Satisfacation', '📬 Kontak'])
+page = st.sidebar.radio('Pilih Halaman:', [' Tentang Saya', ' Dashboard', ' Customer_Satisfacation', ' Kontak'])
 
 # Konten Halaman
-if page == '🏠 Tentang Saya':
+if page == ' Tentang Saya':
     about.about_me()
 
-elif page == '📊 Dashboard':
-    st.header('📌 Proyek Data Analyst')
+elif page == ' Dashboard':
+    st.header(' Proyek Data Analyst')
     st.write("Berikut penjelasan proyek yang telah saya kerjakan:")
-    st.markdown("- 🏪 **Customer Segmentation menggunakan RFM Analysis**")
+    st.markdown("-  **Customer Segmentation menggunakan RFM Analysis**")
     st.markdown("---")
     import Dashboard
     Dashboard.tampilan_dashboard()
 
 
-elif page == '📉 Customer_Satisfacation':
+elif page == ' Customer_Satisfacation':
     import Customer_Satisfacation
     Customer_Satisfacation.Tampilkan_Customer_Satisfacation()
-    st.header('📊 Customer Satisfacation')
+    st.header(' Customer Satisfacation')
     st.write("Analisis kepuasan pelanggan berdasarkan ulasan pelanggan terhadap layanan maskapai penerbangan.")
     st.markdown("---")
     from Customer_Satisfacation import Tampilkan_Customer_Satisfaction
@@ -70,7 +70,7 @@ elif page == '📉 Customer_Satisfacation':
 
 
  
-elif page == '📬 Kontak':
+elif page == ' Kontak':
     import Kontak
     Kontak.munculkan_Kontak()
     
@@ -81,4 +81,4 @@ elif page == '📬 Kontak':
         message = st.text_area("Pesan")
         submitted = st.form_submit_button("Kirim")
         if submitted:
-            st.success("Pesan Anda telah terkirim! ✅")
+            st.success("Pesan Anda telah terkirim! ")
